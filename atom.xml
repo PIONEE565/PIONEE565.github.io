@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <generator uri="https://hexo.io/">Hexo</generator>
+  <icon>https://pionee565.github.io/icon.png</icon>
   <id>https://pionee565.github.io/</id>
   <link href="https://pionee565.github.io/" rel="alternate"/>
   <link href="https://pionee565.github.io/atom.xml" rel="self"/>
@@ -8,9 +9,6 @@
   <title>阅处</title>
   <updated>2026-08-26T08:57:49.753Z</updated>
   <entry>
-    <content>
-      <![CDATA[<p>这是我的第一篇博客，这个博客从此开始用来做教程和上传作品集，偶尔上传一些资源</p>]]>
-    </content>
     <id>https://pionee565.github.io/2026/08/26/My-New-Post/</id>
     <link href="https://pionee565.github.io/2026/08/26/My-New-Post/"/>
     <published>2026-08-26T00:43:50.000Z</published>
