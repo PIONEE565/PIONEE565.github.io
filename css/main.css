@@ -1384,7 +1384,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #ffbd18;
+  background: #ffff17;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -3073,4 +3073,108 @@ header.header {
 /* 隐藏不需要的元素 */
 .site-meta {
   margin: 0 !important;
+}
+/* ========== Mist 顶栏宽敞大气版 ========== */
+/* 1. 整体拉宽 + 增加高度 */
+.header-inner {
+  max-width: 1500px !important; /* 拉宽最大宽度，默认一般只有 960px */
+  padding: 30px 40px !important; /* 增加上下高度和左右留白 */
+  align-items: center !important;
+}
+/* 2. 标题变大、加粗 */
+.site-title {
+  font-size: 1.65rem !important;
+  font-weight: bold !important;
+  color: #fff !important;
+}
+/* 3. 菜单文字变大，间距拉开 */
+.menu-item a {
+  font-size: 0.7rem !important;
+  padding: 10px 20px !important;
+  letter-spacing: 1px !important; /* 增加字间距，显得更舒展 */
+  color: rgba(255,255,255,0.85) !important;
+  transition: all 0.2s ease !important;
+}
+/* 菜单悬停高亮 */
+.menu-item a:hover {
+  color: #fff !important;
+  background: rgba(255,255,255,0.1) !important;
+  border-radius: 4px !important;
+}
+/* 顶栏背景 + 毛玻璃 */
+.header {
+  background: rgba(20,20,20,0.75) !important;
+  backdrop-filter: blur(16px) saturate(1.8) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(1.8) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+}
+.search-popup .search-result-item a:hover {
+  opacity: 0.75;
+}
+.search-popup .search-result-item .search-result-content {
+  color: rgba(255,255,255,0.5) !important;
+  font-size: 0.88rem !important;
+  margin-top: 6px !important;
+  line-height: 1.6 !important;
+}
+/* 关键词高亮颜色 */
+.search-popup .search-keyword {
+  color: #ffab40 !important;
+  font-weight: bold !important;
+  background: rgba(255,171,64,0.12) !important;
+  padding: 1px 4px !important;
+  border-radius: 3px !important;
+}
+/* ====== 滚动条美化 ====== */
+.search-popup::-webkit-scrollbar,
+.search-popup .search-result-container::-webkit-scrollbar {
+  width: 6px !important;
+}
+.search-popup::-webkit-scrollbar-track,
+.search-popup .search-result-container::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+.search-popup::-webkit-scrollbar-thumb,
+.search-popup .search-result-container::-webkit-scrollbar-thumb {
+  background: rgba(0,229,255,0.3) !important;
+  border-radius: 3px !important;
+}
+.search-popup::-webkit-scrollbar-thumb:hover,
+.search-popup .search-result-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,229,255,0.55) !important;
+}
+/* ====== 搜索面板完整修复 ====== */
+.search-pop-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: rgba(0,0,0,0.75) !important;
+  z-index: 9999 !important;
+}
+.search-popup {
+  position: fixed !important;
+  top: 80px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 720px !important;
+  max-width: 92vw !important;
+  max-height: calc(100vh - 160px) !important;
+  z-index: 10000 !important;
+  background: #1a1a2e !important;
+  border: 1px solid rgba(0,229,255,0.3) !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
+.search-popup .search-header {
+  display: flex !important;
+  align-items: center !important;
+  padding: 12px 16px !important;
+  background: #16213e !important;
+  border-bottom: 1px solid rgba(0,229,255,0.2) !important;
+}
+.search-popup .search-input-container {
+  flex: 1 !important;
+  margin: 0 12px !important;
 }
