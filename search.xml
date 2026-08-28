@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>My New Post</title>
-    <url>/2026/08/26/My-New-Post/</url>
-    <content><![CDATA[<p>这是我的第一篇博客，这个博客从此开始用来做教程和上传作品集，偶尔上传一些资源</p>
-]]></content>
-  </entry>
+<search> 
+  
+  
+    
+    <entry>
+      <title>My New Post</title>
+      <link href="/2026/08/26/My-New-Post/"/>
+      <url>/2026/08/26/My-New-Post/</url>
+      
+        <content type="html"><![CDATA[<p>这是我的第一篇博客，这个博客从此开始用来做教程和上传作品集，偶尔上传一些资源</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
 </search>
