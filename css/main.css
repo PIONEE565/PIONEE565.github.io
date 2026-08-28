@@ -1384,7 +1384,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #ffb008;
+  background: #3d4adb;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2908,7 +2908,7 @@ header.header {
 }
 /* ====== 顶部导航栏：全屏毛玻璃效果 ====== */
 .header {
-  width: 30% !important;
+  width: 100% !important;
   max-width: 100% !important;
   left: 0 !important;
   background: rgba(20,20,20,0.6) !important;
