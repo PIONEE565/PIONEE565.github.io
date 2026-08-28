@@ -1384,7 +1384,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #8786c6;
+  background: #ffff71;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -3102,4 +3102,11 @@ body {
 /* 隐藏底部"由 Hexo & NexT.Muse 强力驱动" */
 .powered-by {
   display: none !important;
+}
+.post-block {
+  border: 1px solid rgba(0,255,200,0.3) !important;
+  border-radius: 8px !important;
+  padding: 30px 40px !important;
+  margin: 60px 40px !important;
+  box-shadow: 0 0 15px rgba(0,255,200,0.1) !important; /* 外发光 */
 }
