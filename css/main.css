@@ -1384,7 +1384,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #ffff71;
+  background: #ff0bff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -3045,12 +3045,20 @@ body {
   }
 }
 /* ==========================================
-   6. 搜索弹窗
+   6. 搜索弹窗 — 精准对齐正文栏上方
    ========================================== */
 .search-popup {
-  height: 60% !important;
-  width: 600px !important;
-  border-radius: 8px !important;
+  position: fixed !important;
+  top: 10% !important; /* 正文 top:15% 往上留间距 */
+  left: 20% !important; /* 与 .post-block 的 left 完全一致 */
+  width: 40% !important; /* 与 .post-block 的 width 完全一致 */
+  max-height: 100% !important; /* 高度紧凑，不遮挡正文 */
+  min-width: 280px !important;
+  border-radius: 10px !important;
+  border: 1px solid #000 !important;
+  background: #0f141e !important;
+  box-shadow: 0 0 20px rgba(0,255,200,0.08), inset 0 0 20px rgba(0,0,0,0.8) !important;
+  z-index: 100000 !important;
 }
 .search-popup .search-header {
   padding: 8px !important;
@@ -3064,6 +3072,10 @@ body {
   font-size: 15px !important;
   padding: 0 8px !important;
   line-height: 36px !important;
+  background: rgba(0,0,0,0.3) !important;
+  border: 1px solid rgba(0,255,200,0.15) !important;
+  border-radius: 6px !important;
+  color: #fff !important;
 }
 .search-popup .search-icon,
 .search-popup .popup-btn-close {
@@ -3074,39 +3086,66 @@ body {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+  color: rgba(145,145,145,0.66) !important;
 }
 .search-popup .search-result-container {
   height: calc(100% - 52px) !important;
-  padding: 50px 50px !important;
+  padding: 10px 20px !important;
   overflow-y: auto !important;
+  background: #5a5959 !important;
+  border-radius: 0 0 10px 10px !important;
 }
-/* 无结果时中间的大搜索图标居中 */
 .search-popup .search-result-icon {
-  margin: 2px auto !important;
+  margin: 80px auto !important;
   display: block !important;
   text-align: center !important;
+  color: #fff !important;
 }
 @media (max-width: 767px) {
   .search-popup {
-    height: 400% !important;
-    width: 100% !important;
-    border-radius: 0 !important;
-  }
-  .search-popup .search-header {
-    height: 50px !important;
-  }
-  .search-popup .search-result-container {
-    height: calc(100% - 50px) !important;
+    top: 5% !important;
+    left: 5% !important;
+    width: 90% !important;
+    max-height: 50% !important;
   }
 }
-/* 隐藏底部"由 Hexo & NexT.Muse 强力驱动" */
+/* 搜索遮罩层 — 不遮挡正文 */
+.local-search-pop-overlay {
+  background: #615f5f !important;
+  z-index: 99998 !important;
+}
+/* ==========================================
+   7. 正文栏 — 固定左侧红框位置
+   ========================================== */
+.post-block {
+  position: fixed !important;
+  top: 15% !important;
+  left: 20% !important;
+  width: 40% !important;
+  min-width: 280px !important;
+  border: 1px solid rgba(0,255,200,0.25) !important;
+  border-radius: 10px !important;
+  padding: 25px 20px !important;
+  background: rgba(15,20,30,0.55) !important;
+  box-shadow: 0 0 20px rgba(0,255,200,0.08), inset 0 0 20px rgba(0,0,0,0.8) !important;
+  z-index: 1 !important;
+}
+.post-block .post-title {
+  font-size: 1.2em !important;
+}
+.post-block .post-body {
+  font-size: 0.95em !important;
+}
+/* ==========================================
+   8. 侧边栏 — 半透明修复
+   ========================================== */
+.sidebar {
+  background: #000 !important;
+  border-right: 1px solid #000 !important;
+}
+/* ==========================================
+   9. 隐藏底部驱动信息
+   ========================================== */
 .powered-by {
   display: none !important;
-}
-.post-block {
-  border: 1px solid rgba(0,255,200,0.3) !important;
-  border-radius: 8px !important;
-  padding: 30px 40px !important;
-  margin: 60px 40px !important;
-  box-shadow: 0 0 15px rgba(0,255,200,0.1) !important; /* 外发光 */
 }
