@@ -2,3 +2,19 @@
 body {
   background: linear-gradient(135deg, #0f0c29, #302b63, #24243e) !important;
 }
+
+/* 1. 将顶部区域整体改为左对齐 */
+.header-inner {
+  justify-content: flex-start !important;
+}
+
+/* 2. 调整标题和副标题左对齐，并设置统一的左边距 */
+.site-meta {
+  text-align: left !important;
+  padding-left: 25px !important;   /* 这里的 25px 可以按需改成你喜欢的数字 */
+}
+
+/* 3. 让下方的导航菜单也保持相同的左边距，确保上下对齐 */
+.main-menu {
+  padding-left: 25px !important;
+}
