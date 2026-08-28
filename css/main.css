@@ -1384,7 +1384,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #3d4adb;
+  background: #44ffeb;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2945,4 +2945,17 @@ header.header {
   color: #fff !important;
   border-bottom: 2px solid #87daff;
   padding-bottom: 2px;
+}
+/* ====== 减小顶部间距 ====== */
+.header {
+  margin-top: 0 !important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+}
+.header-inner {
+  padding: 0 !important;
+}
+/* 如果 Muse 主题的 body 有额外 padding，一并清除 */
+main.container {
+  padding-top: 0 !important;
 }
