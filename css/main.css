@@ -1384,7 +1384,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #e7ff47;
+  background: #74db87;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2915,64 +2915,72 @@ header.header {
   -webkit-backdrop-filter: blur(16px) saturate(1.8);
   border-bottom: 1px solid rgba(255,255,255,0.08);
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  padding: 12px 0 !important;
+  padding: 8px 0 !important; /* 缩小上下边距，更紧凑 */
 }
-/* ====== 2. 内部容器：Flex 布局，左右分列 ====== */
+/* ====== 2. 内部容器：同一行左右排列 ====== */
 .header-inner {
   width: 100% !important;
-  max-width: 1440px !important; /* 在大屏幕上限制最大宽度，防止太散 */
+  max-width: 1440px !important;
   margin: 0 auto !important;
   display: flex !important;
-  justify-content: space-between !important; /* 名字在左，菜单在右 */
-  align-items: center !important; /* 垂直居中 */
-  padding: 0 40px !important; /* 左右两侧保留舒适间距 */
+  flex-direction: row !important; /* 同一行排列 */
+  justify-content: space-between !important; /* 名字左，菜单右 */
+  align-items: center !important; /* 垂直居中对齐 */
+  padding: 0 40px !important;
 }
-/* ====== 3. 左侧：博客名字与副标题样式 ====== */
+/* ====== 3. 左侧：博客名字+副标题样式 ====== */
 .site-brand-container {
   display: flex;
+  flex-direction: column; /* 名字和副标题上下排列，更清晰 */
   align-items: flex-start;
-}
-.site-meta {
-  text-align: left !important;
+  text-decoration: none !important;
 }
 .site-title {
-  font-size: 22px !important;
-  font-weight: 700;
+  font-size: 20px !important;
+  font-weight: 700 !important;
   color: #fff !important;
-  letter-spacing: 1px;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  line-height: 1.2 !important;
+  text-shadow: 0 0 8px rgba(255,255,255,0.2);
 }
 .site-subtitle {
   font-size: 12px !important;
-  color: rgba(255,255,255,0.6) !important;
-  margin-top: 4px !important;
+  color: rgba(255,255,255,0.5) !important;
+  margin-top: 2px !important;
 }
-/* ====== 4. 右侧：导航菜单样式微调 ====== */
+/* ====== 4. 右侧：导航菜单样式 ====== */
 .site-nav {
   display: flex;
   align-items: center;
+  gap: 12px; /* 菜单项之间的间距 */
 }
 .site-nav a {
   color: rgba(255,255,255,0.75) !important;
   font-size: 14px;
   font-weight: 500;
-  padding: 8px 16px;
   transition: all 0.3s ease;
-  position: relative;
+  padding: 6px 10px;
+  border-radius: 4px;
 }
 .site-nav a:hover {
   color: #fff !important;
-  text-shadow: 0 0 8px rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.1);
 }
-/* 菜单项底部的激活指示线 */
-.site-nav .menu-item-active a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 2px;
-  background: #87daff;
-  border-radius: 2px;
+/* 激活的菜单项样式 */
+.site-nav .menu-item-active a {
+  color: #fff !important;
+  border-bottom: 2px solid #87daff;
+}
+/* 小屏幕适配：自动恢复上下排列，防止挤堆 */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column !important;
+    gap: 12px;
+    padding: 0 20px !important;
+  }
+  .site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: center;
+  }
 }
