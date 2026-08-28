@@ -1384,7 +1384,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #aaff94;
+  background: #7ce90a;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2906,8 +2906,12 @@ header.header {
     left: 320px;
   }
 }
+/**
+ * Hexo NexT 主题自定义样式表（整理版）
+ * 风格：暗色科幻 + 青色(#00ffcc)高亮 + 玻璃拟态
+ */
 /* ==========================================
-   1. 修复全局滚动条
+   1. 全局滚动条修复
    ========================================== */
 html,
 body {
@@ -2945,7 +2949,7 @@ body {
   border-radius: 0 0 16px 16px !important;
 }
 /* ==========================================
-   3. 标题区域（左移 80px）
+   3. 标题区域
    ========================================== */
 .site-brand-container {
   margin-right: 700px !important;
@@ -3039,24 +3043,19 @@ body {
     text-align: left !important;
   }
 }
-@media (max-width: 767px) {
-  header.header {
-    display: block !important;
-  }
-}
 /* ==========================================
-   6. 搜索弹窗 — 精准对齐正文栏上方
+   6. 搜索弹窗（桌面端）
    ========================================== */
 .search-popup {
   position: fixed !important;
-  top: 10% !important; /* 正文 top:15% 往上留间距 */
-  left: 20% !important; /* 与 .post-block 的 left 完全一致 */
-  width: 40% !important; /* 与 .post-block 的 width 完全一致 */
-  max-height: 100% !important; /* 高度紧凑，不遮挡正文 */
+  top: 10% !important;
+  left: 20% !important;
+  width: 40% !important;
   min-width: 280px !important;
+  max-height: 80% !important;
   border-radius: 10px !important;
-  border: 1px solid #000 !important;
-  background: #0f141e !important;
+  border: 1px solid rgba(0,255,200,0.25) !important;
+  background: rgba(15,20,30,0.85) !important;
   box-shadow: 0 0 20px rgba(0,255,200,0.08), inset 0 0 20px rgba(0,0,0,0.8) !important;
   z-index: 100000 !important;
 }
@@ -3086,36 +3085,28 @@ body {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  color: rgba(145,145,145,0.66) !important;
+  color: rgba(255,255,255,0.6) !important;
 }
 .search-popup .search-result-container {
   height: calc(100% - 52px) !important;
   padding: 10px 20px !important;
   overflow-y: auto !important;
-  background: #5a5959 !important;
+  background: rgba(15,20,30,0.5) !important;
   border-radius: 0 0 10px 10px !important;
 }
 .search-popup .search-result-icon {
   margin: 80px auto !important;
   display: block !important;
   text-align: center !important;
-  color: #fff !important;
+  color: rgba(0,255,200,0.3) !important;
 }
-@media (max-width: 767px) {
-  .search-popup {
-    top: 5% !important;
-    left: 5% !important;
-    width: 90% !important;
-    max-height: 50% !important;
-  }
-}
-/* 搜索遮罩层 — 不遮挡正文 */
+/* 搜索遮罩层 */
 .local-search-pop-overlay {
-  background: #615f5f !important;
+  background: rgba(0,0,0,0.3) !important;
   z-index: 99998 !important;
 }
 /* ==========================================
-   7. 正文栏 — 固定左侧红框位置
+   7. 正文栏 — 固定定位（桌面端）
    ========================================== */
 .post-block {
   position: fixed !important;
@@ -3128,7 +3119,7 @@ body {
   padding: 25px 20px !important;
   background: rgba(15,20,30,0.55) !important;
   box-shadow: 0 0 20px rgba(0,255,200,0.08), inset 0 0 20px rgba(0,0,0,0.8) !important;
-  z-index: 1 !important;
+  z-index: 99999 !important;
 }
 .post-block .post-title {
   font-size: 1.2em !important;
@@ -3137,11 +3128,11 @@ body {
   font-size: 0.95em !important;
 }
 /* ==========================================
-   8. 侧边栏 — 半透明修复
+   8. 侧边栏（桌面端）
    ========================================== */
 .sidebar {
-  background: #000 !important;
-  border-right: 1px solid #000 !important;
+  background: rgba(0,0,0,0.25) !important;
+  border-right: 1px solid rgba(0,255,200,0.1) !important;
 }
 /* ==========================================
    9. 隐藏底部驱动信息
@@ -3150,110 +3141,124 @@ body {
   display: none !important;
 }
 /* ==========================================
-   手机端自适应专属优化（≤ 767px）
+   10. 手机端自适应（≤ 767px）
    ========================================== */
 @media (max-width: 767px) {
-  .site-brand-container {
-    margin-right: 0 !important;
-    padding-left: 10px !important;
-  }
-  .post-block {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    width: 90% !important; /* 占屏幕90%宽度 */
-    min-width: auto !important;
-    margin: 20px auto !important; /* 上下有呼吸感 */
-    padding: 20px 15px !important;
-    border-radius: 10px !important;
-    z-index: 1 !important;
-  }
-  .search-popup {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    min-width: auto !important;
-    height: 100% !important;
-    max-height: 100% !important;
-    border-radius: 0 !important;
-  }
-  .sidebar {
-    left: -320px !important; /* 默认移出屏幕左侧 */
-    transition: left 0.3s ease !important;
-  }
-  .sidebar-active .sidebar {
-    left: 0 !important; /* 展开时贴回左侧 */
-  }
-  .footer {
-    font-size: 12px !important;
-    line-height: 1.8 !important;
+  header.header {
+    display: block !important;
   }
 }
-/* ==========================================
-   手机端自适应（≤ 767px）
-   ========================================== */
-@media (max-width: 767px) {
-  .site-brand-container {
-    margin-right: 0 !important;
-    padding-left: 5px !important;
-  }
-  .header-inner {
-    padding: 10px 3% !important;
-    height: auto !important;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .site-title {
-    font-size: 20px !important;
-  }
-  .site-subtitle {
-    font-size: 0.7rem !important;
-  }
-  .menu .menu-item a {
-    font-size: 16px !important;
-    padding: 4px 8px !important;
-  }
-  .post-block {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    width: 92% !important;
-    min-width: auto !important;
-    margin: 15px auto !important;
-    padding: 18px 14px !important;
-    z-index: 1 !important;
-    border-radius: 8px !important;
-  }
-  .post-block .post-title {
-    font-size: 1.15em !important;
-  }
-  .post-block .post-body {
-    font-size: 0.92em !important;
-    line-height: 1.7 !important;
-  }
-  .search-popup {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    min-width: auto !important;
-    max-height: none !important;
-    border-radius: 0 !important;
-    border: none !important;
-    z-index: 100000 !important;
-  }
-  .search-popup .search-result-container {
-    height: calc(100vh - 52px) !important;
-    padding: 20px 15px !important;
-  }
-  .sidebar {
-    display: none !important;
-  }
-  .footer {
-    font-size: 12px !important;
-    padding: 10px 0 !important;
-  }
+.header-inner {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 10px 10px !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 50px !important;
+}
+.site-brand-container {
+  margin-right: 0 !important;
+  padding-left: 40px !important;
+  flex: 1 !important;
+  text-align: center !important;
+}
+.site-title {
+  font-size: 18px !important;
+  letter-spacing: 1px !important;
+}
+.site-subtitle {
+  font-size: 0.7rem !important;
+}
+.menu {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.menu-item {
+  margin: 0 3px !important;
+}
+.menu .menu-item a {
+  font-size: 13px !important;
+  padding: 4px 8px !important;
+}
+/* --- 正文栏：取消固定，改为正常流式布局 --- */
+.post-block {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 92% !important;
+  min-width: auto !important;
+  margin: 15px auto !important;
+  padding: 15px !important;
+  z-index: 1 !important;
+}
+.post-block .post-title {
+  font-size: 1.1em !important;
+}
+.post-block .post-body {
+  font-size: 0.9em !important;
+  line-height: 1.7 !important;
+}
+/* --- 搜索弹窗：全屏覆盖 --- */
+.search-popup {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  min-width: auto !important;
+  max-height: none !important;
+  border-radius: 0 !important;
+  border: none !important;
+  z-index: 100002 !important;
+}
+.search-popup .search-header {
+  height: 50px !important;
+}
+.search-popup .search-result-container {
+  height: calc(100vh - 50px) !important;
+  padding: 20px !important;
+}
+/* ====== 手机端侧边栏（抽屉式交互） ====== */
+.sidebar {
+  position: fixed !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 260px !important;
+  max-width: 80vw !important;
+  z-index: 1200 !important;
+/* 默认状态：隐藏到屏幕左侧外面 */
+  transform: translateX(-100%) !important;
+  transition: transform 0.3s ease !important;
+  background: rgba(0,0,0,0.92) !important;
+  border-right: 1px solid #0fc !important;
+}
+/* body 有 .sidebar-active 时，侧边栏滑入 */
+.sidebar-active .sidebar {
+  transform: translateX(0) !important;
+}
+/* 遮罩层 */
+.sidebar-dimmer {
+  display: block !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: rgba(0,0,0,0.6) !important;
+  z-index: 1199 !important;
+/* 默认隐藏 */
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: opacity 0.3s ease, visibility 0.3s ease !important;
+}
+/* 侧边栏打开时，遮罩层显示 */
+.sidebar-active .sidebar-dimmer {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
