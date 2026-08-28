@@ -1384,7 +1384,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #fff9ff;
+  background: #ffc65b;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2918,7 +2918,7 @@ header.header {
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 .header-inner {
-  width: 100% !important;
+  width: 40% !important;
   max-width: 100% !important;
   padding: 0 40px; /* 左右保留一点边距，防止菜单太贴边 */
   background: transparent !important;
