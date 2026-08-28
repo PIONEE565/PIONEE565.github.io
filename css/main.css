@@ -1384,7 +1384,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #ffa3dd;
+  background: #6a578e;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2906,9 +2906,34 @@ header.header {
     left: 320px;
   }
 }
+/* ====== 顶部导航栏：毛玻璃效果 ====== */
 .header {
-  background: rgba(212,208,208,0.75) !important;
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
-  box-shadow: 0 2px 15px rgba(233,233,233,0.69);
+  background: rgba(20,20,20,0.6) !important;
+  backdrop-filter: blur(16px) saturate(1.8);
+  -webkit-backdrop-filter: blur(16px) saturate(1.8);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.header-inner {
+  background: transparent !important;
+}
+/* ====== 菜单项：文字间距 ====== */
+.site-nav {
+  letter-spacing: 1px;
+}
+.site-nav a {
+  color: rgba(255,255,255,0.75) !important;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.site-nav a:hover {
+  color: #fff !important;
+  text-shadow: 0 0 8px rgba(255,255,255,0.4);
+}
+/* ====== 当前页激活的菜单项 ====== */
+.site-nav .menu-item-active a {
+  color: #fff !important;
+  border-bottom: 2px solid #87daff;
+  padding-bottom: 2px;
 }
