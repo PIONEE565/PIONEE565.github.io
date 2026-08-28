@@ -1384,7 +1384,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #ffc65b;
+  background: #453dff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2919,7 +2919,7 @@ header.header {
 }
 .header-inner {
   width: 40% !important;
-  max-width: 100% !important;
+  max-width: 40% !important;
   padding: 0 40px; /* 左右保留一点边距，防止菜单太贴边 */
   background: transparent !important;
   display: flex;
@@ -2927,7 +2927,7 @@ header.header {
 }
 /* ====== 菜单项：文字间距与样式 ====== */
 .site-nav {
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 .site-nav a {
   color: rgba(255,255,255,0.75) !important;
