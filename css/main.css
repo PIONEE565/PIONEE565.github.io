@@ -1384,7 +1384,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #34de62;
+  background: #ff2ed4;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -3379,6 +3379,27 @@ header.header {
   color: #00c896;
   letter-spacing: 2px;
   animation: blink 1.5s ease-in-out infinite;
+}
+/* ========== 手机端强制暗色背景 ========== */
+@media screen and (max-width: 767px) {
+  body {
+    background: #1e1e2e !important;
+    color: #cdd6f4 !important;
+  }
+  .post-block,
+  .content-wrap {
+    background: #2a2a3c !important;
+  }
+  .header-inner {
+    background: #1e1e2e !important;
+  }
+  .footer {
+    background: #1e1e2e !important;
+    color: #999 !important;
+  }
+  .search-popup {
+    background: #2a2a3c !important;
+  }
 }
 @keyframes spin {
   to {
