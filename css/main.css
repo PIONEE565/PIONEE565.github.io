@@ -1384,7 +1384,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #ff2ed4;
+  background: #ffa220;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -3140,7 +3140,7 @@ body {
     top: 0 !important;
     left: 0 !important;
     width: 100% !important;
-    z-index: 1050 !important;
+    z-index: 950 !important;
     opacity: 0 !important;
     visibility: hidden !important;
     transform: translateY(-100%) !important;
@@ -3166,7 +3166,7 @@ header.header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  height: 20px !important;
+  height: 10px !important;
 }
 .site-brand-container {
   margin-right: 0 !important;
@@ -3175,16 +3175,16 @@ header.header {
   text-align: center !important;
 }
 .site-title {
-  font-size: 30px !important;
+  font-size: 20px !important;
   letter-spacing: 1px !important;
 }
 .site-subtitle {
-  font-size: 0.7rem !important;
+  font-size: 0.9rem !important;
 }
 .menu {
   position: absolute !important;
-  top: 70% !important;
-  transform: translateY(-50%) !important;
+  top: 100% !important;
+  transform: translateY(-60%) !important;
   margin: 0 !important;
   padding: 0 !important;
 }
@@ -3202,15 +3202,15 @@ header.header {
   left: auto !important;
   width: 92% !important;
   min-width: auto !important;
-  margin: 11px auto !important;
-  padding: 15px !important;
+  margin: 3px auto !important;
+  padding: 21px !important;
   z-index: 1 !important;
 }
 .post-block .post-title {
   font-size: 1.1em !important;
 }
 .post-block .post-body {
-  font-size: 0.4em !important;
+  font-size: 1em !important;
   line-height: 1.7 !important;
 }
 /* --- 搜索弹窗：全屏覆盖 --- */
@@ -3222,7 +3222,7 @@ header.header {
   height: 100vh !important;
   min-width: auto !important;
   max-height: none !important;
-  border-radius: 0 !important;
+  border-radius: 10 !important;
   border: none !important;
   z-index: 99999 !important;
 }
@@ -3400,6 +3400,125 @@ header.header {
   .search-popup {
     background: #2a2a3c !important;
   }
+}
+PC端搜索框设置/,
+.search-popup {
+  width: 700px;
+  max-width: 90vw;
+}
+/* 搜索头部（含输入框区域） */
+.search-header {
+  height: 56px; /* 默认约 40px，加高 */
+}
+/* 搜索输入框 */
+.search-input {
+  font-size: 16px;
+  line-height: 34px; /* 配合头部高度 */
+}
+/* 搜索结果区域最大高度 */
+.search-result-container {
+  max-height: 480px; /* 默认偏矮，可调高 */
+}
+.site-nav {
+  margin-left: 58px !important;
+}
+/* 让搜索弹窗整体垂直+水平居中 */
+.search-pop-overlay {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+/* 调整搜索弹窗主体的宽度和位置 */
+.search-popup {
+  margin: auto !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  max-width: 600px !important; /* 可调整弹窗宽度 */
+}
+/* 调整搜索输入框区域的高度和内边距 */
+.search-input-container {
+  padding: 12px 16px !important; /* 增大上下内边距，让输入区域更高 */
+  height: auto !important;
+}
+/* 调整搜索输入框字体大小 */
+.search-input {
+  height: 36px !important; /* 输入框自身高度 */
+  font-size: 16px !important;
+}
+/* 调整下方搜索结果显示区域的高度 */
+.search-results-container {
+  max-height: 400px !important; /* 搜索结果最大高度，可按需修改 */
+}
+/* 整体下移顶部菜单栏（默认距离顶部 15px，可按需修改数值） */
+.header {
+  margin-top: 15px !important;
+}
+/* ===== 搜索弹窗统一深色美化 ===== */
+/* 1. 弹窗主体 */
+.search-popup {
+  background: #1a1a2e !important;
+  border: 1px solid rgba(0,255,136,0.2) !important;
+  box-shadow: 0 12px 10px rgba(0,0,0,0.5) !important;
+  border-radius: 12px !important;
+}
+/* 2. 顶部输入框区域：去掉默认的灰色背景 */
+.search-input-container {
+  background: transparent !important; /* 关键：变透明，露出下方深色底 */
+  padding: 16px 20px !important;
+  border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+}
+/* 3. 搜索输入框本身 */
+.search-input {
+  background: rgba(0,0,0,0.3) !important; /* 深灰半透明背景 */
+  color: #e0e0e0 !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  border-radius: 30px !important;
+  height: 49px !important;
+  font-size: 15px !important;
+  padding: 0 16px !important;
+  transition: all 0.3s ease !important;
+/* 鼠标点击输入时的状态 */
+}
+.search-input:focus {
+  background: rgba(0,0,0,0.5) !important;
+  border-color: rgba(0,255,136,0.5) !important;
+  box-shadow: 0 0 8px rgba(0,255,136,0.15) !important;
+}
+/* 4. 搜索图标与关闭按钮颜色微调 */
+.search-icon,
+.popup-btn-close {
+  color: #a0a0a0 !important;
+  transition: color 0.3s ease !important;
+}
+.search-icon:hover,
+.popup-btn-close:hover {
+  color: #0f8 !important; /* 鼠标悬停时亮起 */
+}
+/* 调高搜索弹窗整体高度 */
+.search-popup {
+  height: 520px !important; /* 默认大约380px，按需加大 */
+  max-height: 70vh !important; /* 最大不超过屏幕70% */
+}
+/* 搜索结果列表区域跟着撑满剩余空间 */
+.search-results-container {
+  height: calc(100% - 70px) !important; /* 减去顶部输入框区域的高度 */
+  overflow-y: auto !important;
+}
+/* 搜索菜单项单独左移，-8px可根据效果调整，数值越大（负数越多）左移越远 */
+ul.main-menu.menu .menu-item-search {
+  transform: translateX(-8px) !important;
+}
+/* 彻底去除导航栏和菜单上下的边框线及阴影 */
+nav.site-nav,
+div.site-nav-wrap,
+ul.main-menu.menu {
+  border-top: none !important;
+  border-bottom: none !important;
+  border: none !important;
+  box-shadow: none !important; /* 防止是阴影产生的线条 */
 }
 @keyframes spin {
   to {
